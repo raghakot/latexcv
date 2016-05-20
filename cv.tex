@@ -1,0 +1,233 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{verbatim}
+\usepackage{marvosym}
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo}   				%better formatting of the A4 page
+\usepackage{longtable}   				    %for splitable tables..
+\usepackage{titlesec}		     			%custom \section
+\usepackage{tabularx}
+\usepackage{cooltooltips}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = FontinSans-SmallCaps]{Fontin Sans}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%compact items, and indentations..
+\usepackage{paralist}
+\usepackage{array}
+\makeatletter
+\newcommand*{\compress}{\@minipagetrue}
+\makeatother
+\defaultleftmargin{1em}{}{}{}
+\renewcommand{\labelitemi}{$\triangleright$}
+\newlength{\originalParindent}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Raghavendra Kotikalapudi
+    }\bigskip\par}
+\noindent{\href{mailto:ragha@outlook.com}{ragha@outlook.com} \hfill \href{raghakot.github.io}{raghakot.github.io} \hfill 701-541-0152}
+
+\section{Summary}
+I go by Ragha. Software developer by the day, avid machine learning reader and tinkerer by the night. I usually spend my time trying to get a deeper understanding of machine learning, topology, and related research areas. I also indulge in building hobby hardware projects using Arduino from time to time.
+
+\section{Awards and Achievements}
+\begin{minipage}[t]{\textwidth}
+    \begin{compactitem} \compress
+        \item Masters Thesis Chapter Media Coverage. Noteworthy sources include \href{http://vitals.msnbc.msn.com/_news/2012/05/18/11757211-depressed-people-spend-more-time-chatting-online?lite}{MSNBC}, \href{http://healthland.time.com/2012/06/22/the-internet-knows-youre-depressed-but-can-it-help-you/}{TIME}, \href{http://www.forbes.com/sites/kashmirhill/2012/06/21/fascinating-how-you-use-the-internet-may-reveal-youre-depressed/}{Forbes}, \href{http://articles.timesofindia.indiatimes.com/2012-05-17/computing/31748166_1_depressed-students-internet-usage-internet-data}{Times of India}, \href{http://technews.acm.org/archives.cfm?fo=2012-05-may/may-21-2012.html#583682}{ACM TechNews}, and
+            \href{http://tech.slashdot.org/story/12/05/22/2039246/depressed-people-surf-the-web-differently}{Slashdot}. Published \href{http://www.nytimes.com/2012/06/17/opinion/sunday/how-depressed-people-use-the-internet.html?_r=3}{NYTimes} Op-ED
+        \item Golden Volcano Award  - Online Services Division Science Fair, Microsoft
+        \item Best Social App Award - Microsoft Fargo Hackathon 2014.
+        \item 2012 Microsoft Team Innovation Award
+        \item Sebastian Thrun \& Peter Norvig's Intro to AI Online Course - \href{http://tinyurl.com/ai-cert}{Cert of Accomplishment}
+        \item CS Academic Achievement Award - 2010 \& 2011, Missouri S\&T
+        \item Scholarship for Academic Excellence, SMVD University, India
+    \end{compactitem}
+\end{minipage}
+
+\section{Work Experience}
+\begin{longtable}{r|p{12.5cm}}
+ \textsc{Dec 2014} & Software Developer Engineer, \normalsize   \textbf{Amazon}, Seattle \\
+ \textsc{Present} & \footnotesize{\begin{minipage}[t]{12.5cm} Worked on building backend systems for Amazon Instant Video \href{http://www.wired.com/2015/04/amazon-xray-fire-tv/}{XRay} feature.
+ \begin{compactitem}
+    \item Built end-end Actor Identification workflow including face detection, clustering, recognition, and QA through mechanical turk.
+    \item Implemented prototypes for continuous improvement using Deep Residual Networks with Triplet loss to leverage QA feedback from Mechanical turk.
+    \item Worked on building scalable backend systems using Amazon DynamoDB, SWF, RDS, SQS for vending XRay data.
+    \item Improved algorithms for automating scene boundary detection in videos.
+    \item Prototyped cold start recommendations and automated genre identification using Word2Vec embeddings and Word Movers Distance and hierarchical clustering.
+\end{compactitem}
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Sept 2011} & Software Developer Engineer, \normalsize \textbf{Microsoft Corporation}, Fargo \\
+ \textsc{Nov 2014} & \footnotesize{\begin{minipage}[t]{12.5cm} Worked on lots of cool projects. General areas of experience include:
+ \begin{compactitem}
+    \item Cross platform (iOS, Android and Windows Phone) mobile app development using HTML5/JS, knockout, cordova and nodejs.
+    \item Developed Win8/Phone native apps using XAML and HTML5/JS
+    \item Full stack development on GP Web Client, built UX and services to enable multi tenant/session management.
+    \item Designed an algorithm to convert absolute UI layout into a relative layout.
+\end{compactitem}
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Aug 2010} & Research Assistant, \emph{Computational Intelligence Lab}, \normalsize \textbf{Missouri S\&T} \\
+ \textsc{Aug 2011} & \textsc{\href{https://github.com/raghakot/papers/blob/master/thesis.pdf}{Thesis}} | \small Advisors: Dr. Sriram \textsc{Chellappan}, Dr. Donald \textsc{Wunsch} \\
+ & \footnotesize{ \begin{minipage}[t]{12.5cm} Developed a novel non-intrusive method for identifying depression among college students using packet level network information through machine learning. Achieved $\sim$70\% accuracy in classifying depression and $\sim$80\% in estimating the relative change.
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Sept 2010} & Research Assistant, \emph{Virtual Reality Lab}, \normalsize \textbf{Missouri S\&T} \\
+ \textsc{Dec 2010} & \small Advisors: Dr. Frank \textsc{Liu}, Dr. Ming \textsc{Leu} \\
+ & \footnotesize{ \begin{minipage}[t]{12.5cm} \begin{compactitem}
+     \item Coordinated/Led a team of 10 develop a low cost simulation environment for landmine detection training. Our research project was featured on US Army Lab \href{http://www.arl.army.mil/www/default.cfm?page=640}{Website}
+     \item Specifically worked on optimizing data communication between \textsc{Nintendo Wiimote} sensors and Simulation System for faster frame rates.
+     \end{compactitem}
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{May 2010} & Programming Intern, \normalsize \textbf{Advanced Military Equipments Inc}, Dixon \\
+ \textsc{Aug 2010} & \small Supervisor: Greg \textsc{Pierson} \\
+ & \footnotesize{ \begin{minipage}[t]{12.5cm} Developed an algorithm to improve the simulation frame rate of the \emph{Virtual Landmine Training Detection Simulator} from 15 to 85 fps, effectively reducing the total cost of the final product by 20\%.
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Mar 2010} & Developer, \emph{Software Engineering Lab}, \normalsize \textbf{Missouri S\&T}, Rolla \\
+ \textsc{May 2010} & \small Supervisor: Dr. Frank \textsc{Liu} \\
+ & \footnotesize{ \begin{minipage}[t]{12.5cm} Designed and developed a front end (Adobe Director) with \textsc{MySQL} database backing for the \emph{Virtual Landmine Training Detection Simulator}.
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Jan 2010} & Research Assistant, \emph{Cognitive Studies Lab}, \normalsize \textbf{Missouri S\&T}, Rolla \\
+ \textsc{May 2010} & \small Advisors: Dr. Sriram \textsc{Chellappan}, Dr. Jacqueline \textsc{Bichsel} \\
+ \textsc{\href{https://github.com/raghakot/papers/blob/master/math_anxiety.pdf}{Report}} & \footnotesize{\begin{minipage}[t]{12.5cm} Identified intervention strategies for reducing math anxiety and improving math performance by performing cluster analysis in conglomeration with various statistical methods.
+ \end{minipage}}\\
+\end{longtable}
+
+\section{Commercial Side Projects}
+\begin{longtable}{r|p{12.5cm}}
+\textsc{Nov 2014} & \textbf{WatNow App} | \href{http://www.watnowapp.com/}{http://www.watnowapp.com/} \\
+ & \footnotesize{ \begin{minipage}[t]{12.5cm} Bored? Need ideas on how to kill time? The app serves as a friendly companion that answers these questions by suggesting activities, restaurants, events, movies to watch, amongst others. Uses machine learning to figure out recommendations with emphasis on preserving diversity. This is still a work in progress. 
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+  \textsc{Dec 07} & \textbf{CAAMS Suite} | \href{http://tinyurl.com/CAAMSReport}{http://tinyurl.com/CAAMSReport}\\
+ \textsc{Apr 09} & \footnotesize{ \begin{minipage}[t]{12.5cm}
+ CAAMS is an integrated management suite for universities. I was primarily involved with the UX and architecture design. It was showcased during Sun Tech Days 2009 at Hyderabad, during Key Note speech by Joe Harley, VP, Sun MicroSystems Global education wing. 
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Sept 2008} & \textbf{Payroll \& School Management System} \\
+ \textsc{May 2009} & \footnotesize{ \begin{minipage}[t]{12.5cm} Developed a comprehensive payroll \& school management system using \textsc{Java} and \textsc{MySQL} featuring a modular pay by feature design. Notiable unique features include: fraud detection, support for changing tax rules, automated backup/recovery.
+ \end{minipage}}\\
+\end{longtable}
+
+\section{Open Source Development}
+\begin{longtable}{r|p{12.5cm}}
+\textsc{Apr 2016} & \normalsize \textbf{keras-resnet} | \href{https://github.com/raghakot/keras-resnet}{https://github.com/raghakot/keras-resnet} \\
+& \footnotesize{ \begin{minipage}[t]{12.5cm} Deep residual neural network implementation in keras.
+ \end{minipage}}
+  \\
+ \multicolumn{2}{c}{}
+ \\
+\textsc{Nov 2015} & \normalsize \textbf{tsne-visualization} | \href{https://github.com/raghakot/tsne-visualization}{https://github.com/raghakot/tsne-visualization} \\
+& \footnotesize{ \begin{minipage}[t]{12.5cm} Runs tsne locally on a browser with provided data in real time with 2D/3D projections using three js.
+ \end{minipage}}
+  \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Apr 2008} & \textbf{JNeuralNet} | \href{https://github.com/raghakot/jneuralnet}{https://github.com/raghakot/jneuralnet} \\
+ & \textsc{Code For Freedom 2009}, \small \textbf{Sun Microsystems}, India \\
+ & \footnotesize{ \begin{minipage}[t]{12.5cm}
+ Supervised Java neural network framework with APIs for implementing various architectures, training algorithms, and input/output preprocessors. Includes GUI training and analysis tools.
+ \end{minipage}}
+ \\
+ \multicolumn{2}{c}{}
+ \\
+ \textsc{Jan 2010} & \normalsize \textbf{JSimpleAI} | \href{https://github.com/raghakot/jsimpleai}{https://github.com/raghakot/jsimpleai} \\
+& \footnotesize{ \begin{minipage}[t]{12.5cm} Java AI framework for solving puzzles using BFS, DFS, A* Search, Iterative Deepening. Implements sample solvers for travelling salesman, graph bisection, and an online puzzle \href{http://www.justriddlesandmore.com/frogleap.html}{frog leap}.
+ \end{minipage}}\\
+\end{longtable}
+
+\section{Education}
+\begin{tabularx}{0.95\textwidth}{rX}	
+  \textsc{August} 2011 & Master of Science in \textsc{Computer Science} | \normalsize \textsc{Gpa}: 3.9/4.0 \\
+& \normalsize \textbf{Missouri University of Science and Technology}, Rolla \\
+& Thesis: \href{https://github.com/raghakot/papers/blob/master/thesis.pdf}{``Depression Classification via Internet Usage Patterns''} \\
+& Technical Papers: \href{https://github.com/raghakot/papers/blob/master/SPSS.pdf}{Hybrid EA}, \href{https://github.com/raghakot/papers/blob/master/coea_pacman.pdf}{COEA Pacman}, \href{https://github.com/raghakot/papers/blob/master/hoomt_metrics.pdf}{HOOMT Metrics} \\
+& \small Advisors: Dr. Sriram \textsc{Chellappan}, Dr. Donald \textsc{Wunsch}\\
+& \\
+  \textsc{May} 2009 & Bachelors of Technology in \textsc{Computer Science} | \normalsize \textsc{Gpa}: 8.11/10.0 \\
+& \normalsize \textbf{Shri Mata Vaishno Devi University}, India \\
+& Major Project: ``Neural Network based Weather Prediction System'' \\
+& \small Advisor: Dr. M.L. Garg \\
+\end{tabularx}
+
+\section{Technical Skills}
+\begin{longtable}{lp{11cm}}
+ Languages & Java, C\# Javascript, C++, Python \\
+ Front end & HTML5, LESS/CSS, Silverlight, WPF, XAML, Swing \\
+ Mobile & Cordova, Android, WinRT, WinPhone8 \\
+ AWS & DynamoDB, SQS, RDS, SWF, Mechanical Turk \\
+ Machine Learning & scipy, sklearn, Tensorflow, OpenCV, nltk/spacy, keras, Caffe \\
+\end{longtable}
+
+\section{Journal Papers}
+\begin{enumerate}[1)]
+    \item V. Hongal, \textbf{R. Kotikalapudi} and M. Choi, \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6924808&isnumber=6970761}{``Design, Test, and Repair of MLUT (Memristor Look-Up Table) Based Asynchronous Nanowire Reconfigurable Crossbar Architecture,"} \emph{in IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 4, no. 4, pp. 427-437, Dec. 2014.}
+
+    \item F. Montgomery, S. Chellappan,\textbf{ R. Kotikalapudi}, D. Wunsch and K. Lutzen. \href{http://www.tandfonline.com/doi/pdf/10.1080/15228835.2012.756600}{``Monitoring Student Internet Patterns: Big Brother or Promoting Mental Health?,"} \emph{Journal of Technology in Human Services, v.31, 2013.} Work resulted in  \textbf{\href{http://www.nsf.gov/awardsearch/showAward?AWD_ID=1254117}{NSF Career Award}}.
+\end{enumerate}
+
+\section{Conference Papers}
+\begin{enumerate}[1)]
+    \item \textbf{R. Kotikalapudi}, S. Chellappan, F. Montgomery, D. Wunsch and K. Lutzen, \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6387969&isnumber=6387954}{``Associating Internet Usage with Depressive Behavior Among College Students,"} \emph{in IEEE Technology and Society Magazine, vol. 31, no. 4, pp. 73-80, winter 2012}.
+
+    \item V. A. Hongal, \textbf{R. Kotikalapudi}, Y. B. Kim and M. Choi, \href{http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6026406}{``A novel ``divide and conquer'' testing technique for memristor based lookup table,"} 2011 IEEE 54th International Midwest Symposium on Circuits and Systems (MWSCAS), Seoul, 2011.  
+
+    \item Wenjuan Zhu, Ming C. Leu, Xiaoqing F. Liu, \textbf{Raghavendra Kotikalapudi}, Hui He, Sheela Surisetty, Jerry D. Plunkett, Greg Pierson, and Bradley M. Davis, \href{http://worldcomp-proceedings.com/proc/p2011/CGV4794.pdf}{``Low-Cost, High-Fidelity Virtual Landmine Detection Training System,''} \emph{International Conference on Computer Graphics and Virtual Reality, 2011}
+
+    \item N. Dutta, \textbf{R. Kotikalapudi} and M. Bhonsle, \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5783810&isnumber=5783792}{``A formal analysis of protocol-independent security threats in VANETs,"} \emph{Students' Technology Symposium (TechSym), 2011 IEEE, Kharagpur, 2011, pp. 103-108.}
+
+    \item N. Dutta, \textbf{R. Kotikalapudi}, A. Saxena and S. Chellappan, \href{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6068427&isnumber=6068399}{``A Multi-tiered Architecture for Content Retrieval in Mobile Peer-to-Peer Networks,"} \emph{2011 IEEE 12th International Conference on Mobile Data Management, Lulea, 2011, pp. 104-109.}
+\end{enumerate}
+
+\end{document}
