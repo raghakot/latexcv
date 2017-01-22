@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.8.28)  19 JAN 2017 22:56
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.8.28)  21 JAN 2017 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,49 +912,24 @@ Overfull \hbox (2.05801pt too wide) in paragraph at lines 152--155
 []| []| 
  []
 
-
-Overfull \hbox (2.05801pt too wide) in paragraph at lines 160--163
-[]| []| 
- []
-
-
-Overfull \hbox (2.05801pt too wide) in paragraph at lines 166--169
-[]| []| 
- []
-
-
-Overfull \hbox (2.05801pt too wide) in paragraph at lines 172--175
-[]| []| 
- []
-
-
-Overfull \hbox (2.05801pt too wide) in paragraph at lines 178--180
-[]| []| 
- []
-
-
-Overfull \hbox (4.13438pt too wide) in alignment at lines 158--180
- [] [] 
- []
-
 [2]
-Overfull \hbox (0.80554pt too wide) in paragraph at lines 220--221
+Overfull \hbox (0.80554pt too wide) in paragraph at lines 226--227
 []\EU1/lmr/m/n/10.95 N. Dutta, \EU1/lmr/bx/n/10.95 R. Kotikalapudi \EU1/lmr/m/n
 /10.95 and M. Bhonsle, [][]“A formal analysis of protocol-independent
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
 [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
  (./cv.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 225.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 225.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 231.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
  22384 strings out of 493638
  391425 string characters out of 6146796
- 431083 words of memory out of 5000000
+ 431067 words of memory out of 5000000
  25619 multiletter control sequences out of 15000+600000
  9091 words of font info for 47 fonts, out of 8000000 for 9000
  1329 hyphenation exceptions out of 8191
